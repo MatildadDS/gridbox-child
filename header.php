@@ -52,8 +52,9 @@
 
 		<div id="content" class="site-content container clearfix">
 
-		<div class="sponsor-info">
+		<div class="info-sponsor">
   			<a href="<?php echo esc_url( get_theme_mod('gridbox_child_info_sponsor_link') ); ?>">
     			<?php echo esc_html( get_theme_mod('gridbox_child_info_sponsor_text') ); ?>
   			</a>
-		</div>
+        </div>
+        

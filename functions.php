@@ -62,4 +62,31 @@ function gridbox_child_add_stuff_to_customizer( $wp_customize ) {
         'selector' => '.sponsor-info a',
       )
     );
+
+    $wp_customize->add_section(
+        'gridbox_child_custom_section_footer',
+        array(
+          'title'       => 'Réglages Footer Brioche et Canelle',
+          'description' => 'Les options ajoutés via le thème gridbox-child',
+        )
+      );
+    
+      $wp_customize->add_setting(
+        'gridbox_child_info_sponsor_text_footer',
+        array(
+          'default'           => '',
+          'sanitize_callback' => 'wp_filter_nohtml_kses',
+        )
+      );
+    
+      $wp_customize->add_control(
+        'gridbox_child_info_sponsor_text_footer',
+        array(
+          'type'        => 'text',
+          'section'     => 'gridbox_child_custom_section_footer',
+          'label'       => 'Info sponsor (text)',
+          'description' => 'Texte affiché en haut de toutes les pages.',
+        )
+      );
   }
+  
